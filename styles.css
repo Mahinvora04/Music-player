@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  z-index: -1;
+  animation: fadeInBackground 2s ease-in-out;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  position: relative;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  animation: fadeInBackground 2s ease-in-out;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255);
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #f1ac15;
+  box-shadow: 0 0 10px rgba(240, 168, 33, 0.8);
+}
+
+.music-player {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.music-player {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.5s ease-out;
+}
+
+.song-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.song-image {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.song-image:hover {
+  transform: scale(1.01);
+}
+
+.song-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#song-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f39c12;
+  background-image: linear-gradient(90deg, #f39c12, #fff, #f39c12);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+#artist-name {
+  font-size: 12px;
+  padding-top: 4px;
+  color: #ccc;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+button {
+  background: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+
+button:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+
+.progress-container {
+  background: #444;
+  height: 5px;
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  background: #f39c12;
+  height: 100%;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ccc;
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+button {
+  background: #040404;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.493);
+}
+
+button:hover {
+  background: #111;
+  transform: scale(1.1);
+}
